@@ -9,5 +9,12 @@ public class Hangman {
 		// TODO Auto-generated method stub
 		//YEET
 	}
+//hello!!!
+//that's all we really need to do today
+//might make a very rough outline though
+//You can get back to packing and stuff
+//I'll probably get us started later tonight
+//Good luck and have fun
 
+//True, I won't be at this computer tomorrow.
 }
