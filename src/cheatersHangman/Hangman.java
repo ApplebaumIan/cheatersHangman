@@ -1,4 +1,4 @@
-//ypackage cheatershangman;
+package cheatershangman;
 import java.io.File;
 import java.util.*;
 import java.lang.*;
