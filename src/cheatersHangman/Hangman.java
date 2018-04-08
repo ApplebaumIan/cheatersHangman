@@ -1,11 +1,11 @@
-package cheatersHangman;
-/***********************
-Jonathan and Ian's Cheaters hangman main code
-***********************/
+package cheatershangman;
+import java.io.File;
 import java.util.*;
 import java.lang.*;
-public class Hangman {
- //stores the words in an ArrayList. The ReplaceAll method replaces commas, punctuations, etc. 
+
+public class CheatersHangman {
+
+    //stores the words in an ArrayList. The ReplaceAll method replaces commas, punctuations, etc. 
     public static List<String> readFile(String filename) {
         String line;
         String[] word;
@@ -27,27 +27,50 @@ public class Hangman {
                 i++;
             }
             scanner.close();
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return words;
     }
        
 	//MAIN METHOD
-	public static void main(String[] args) {
-		System.out.println("Hello World and Jon");
-		//Short Attempt to get file reading working on the train home... so far no success
-		System.out.println(readFile("dictionary.txt"));
-		
-	// TODO Auto-generated method stub
-		//YEET
-	}
-    //hello!!!
-    //that's all we really need to do today
-    //might make a very rough outline though
-    //You can get back to packing and stuff
-    //I'll probably get us started later tonight
-    //Good luck and have fun
-
-    //True, I won't be at this computer tomorrow.
+    public static void main(String[] args) {
+	List<String> dictionary = readFile("dictionary.txt");
+        List<String> words;
+        int wordLength = 0;
+        Scanner in = new Scanner(System.in);
+        boolean done = false;
+        while(!done) {
+            System.out.print("Choose the length of the word you want to guess: ");
+            wordLength = in.nextInt();
+            words = new ArrayList();
+            for(String word : dictionary) {
+                if(word.length() == wordLength) {
+                    words.add(word);
+                }
+            }
+            if(words.size() == 0) {
+                System.out.println("There are no words with that length. Pick a different length.\n");
+            }
+            else {
+                done = true;
+            }
+        }
+        System.out.print("Choose the amount of incorrect guesses it will take for you to lose: ");
+        int guesses = in.nextInt();
+        if(guesses < 1) {
+            guesses = 1;
+        }
+        else if(guesses > 26) {
+            guesses = 26;
+        }
+        String hiddenWord = "";
+        for(int i = 0; i < wordLength; i++) {
+            hiddenWord += "_";
+        }
+        while(guesses != 0 && hiddenWord.contains("_")) {
+            System.out.print("Guess a letter: ");
+        }
+    }
+    
 }
