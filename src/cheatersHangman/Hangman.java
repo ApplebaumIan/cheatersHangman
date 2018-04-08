@@ -3,7 +3,7 @@ import java.io.File;
 import java.util.*;
 import java.lang.*;
 
-public class CheatersHangman {
+public class Hangman {
 
     //stores the words in an ArrayList. The ReplaceAll method replaces commas, punctuations, etc. 
     public static List<String> readFile(String filename) {
@@ -22,9 +22,9 @@ public class CheatersHangman {
                     singleword = singleword.replaceAll("[^a-zA-Z'\\s]", "").replaceAll("(\r?\n){2}", "§").replaceAll("[\t\r\n]+", " ").replace("§", "\n");          //removes punctuations except hyphens and apostrophes
                     //System.out.println(singleword);
                     words.add(singleword);
-                    lineNum.add(i);
+		    //  lineNum.add(i);
                 }
-                i++;
+		//  i++;
             }
             scanner.close();
         } catch (Exception e) {
