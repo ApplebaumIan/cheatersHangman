@@ -1,0 +1,16 @@
+1. Store the dictionary immediately
+2. Hallo pick the letter length n
+	if no words {pick again}
+3. Hallo pick ur guesses
+4. Make a list of n-letter words
+5. Hallo guess a letter
+	if already guessed {pick again}
+	Divide word list into where/how many of the character appears
+	Whatever has the biggest list gets revealed
+		Whatever reveals the least letters if there's a tie
+	Stop game if no more guesses/word revealed
+	Pick a word to reveal if out of guesses
+6. Play again y/n?
+
+
+Maps help create word families.
