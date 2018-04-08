@@ -1,4 +1,4 @@
-package cheatershangman;
+//ypackage cheatershangman;
 import java.io.File;
 import java.util.*;
 import java.lang.*;
@@ -45,11 +45,11 @@ public class Hangman {
             wordLength = in.nextInt();
             words = new ArrayList();
             for(String word : dictionary) {
-                if(word.length() == wordLength) {
+                if(word.length() == wordLength) { //add words of the length choice from dictionary list to list of words of that length
                     words.add(word);
                 }
             }
-            if(words.size() == 0) {
+            if(words.size() == 0) {//catch for evil people
                 System.out.println("There are no words with that length. Pick a different length.\n");
             }
             else {
